@@ -17,4 +17,7 @@ here is some results I post.
 
 3. Go to https://hqlwyz.github.io/
 
+## Another useful page:
+	https://pages.github.com/
+
 15th July, 2020
