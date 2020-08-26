@@ -1,7 +1,7 @@
 # hqlwyz.github.io
 
 
-here is some results I post.
+here I post some code and results.
 
 ## Build steps:
 
@@ -11,7 +11,7 @@ here is some results I post.
 
 	git add .
 
-	git commit -m "init blog"
+	git commit -m "xxx xxx"
 
 	git push -u origin master
 
