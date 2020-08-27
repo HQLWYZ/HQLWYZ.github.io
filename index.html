@@ -1,44 +1,114 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
 <title>VLAST tracker prototype</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.logo_left {
+  float:left;
+  width:50%;
+  padding:15px;
+  margin-top:7px;
+  text-align:left;
+}
+.logo_mid {
+  float:right;
+  width:25%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+
+}
+.logo_right {
+  
+  float:right;
+  width:25%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+.pic_left {
+  float:left;
+  width:50%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+.pic_right {
+  
+  float:left;
+  width:50%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .pic_left, .pic_right {
+    width:100%;
+  }
+}
+</style>
+
 <body>
-    <h1>VLAST tracker prototype</h1>
 
-	<p></p>
+<div class="logo_left">
+	<h1>VLAST tracker prototype </h1>	
+</div>
+<div class="logo_mid">
+	<a href="https://www.liverpool.ac.uk/" ><img src="./liverpool_logo.png" alt="Alps" style="width:100%"></a>
+</div>
+<div class="logo_right">
+	 <a href="http://www.pmo.ac.cn/" ><img src="./pmo_log.png" alt="Alps" style="width: 100%"></a>
 
-	<p>------------------------------------------------------------------</p>
-	<p>&nbsp &nbsp <a href="./ap2/ap2_analysis.html">
-	  Allpix2 analysis
-	</a>
-	&nbsp &nbsp <a href="./sensor_qc/sensor_qc.html">
-	  Sensor QC
-	</a>
-	&nbsp &nbsp <a href="./hybrid_testing/hybrid_testing.html">
-	  Hybrid tset
-	</a></p>
-<p>------------------------------------------------------------------</p>
-<p>&nbsp &nbsp <img src="./ladder_demo.png" alt="ladder demo pic lost" width="304" height="228"></p>
-<p>&nbsp &nbsp Fig.1 VLAST tracker detector 1/4 layer.</p>
-<p>------------------------------------------------------------------</p>
-<p>Shen Wang</p>
-<p> Honoary Research Fellow,</p>
-<p>Department of Physics, University of Liverpool,</p>
-<p>Oliver Lodge Laboratory, Oxford Street, Liverpool L69 7ZE </p>
-<p>Shen.Wang@liverpool.ac.uk </p>
-<p> shenwang@hep.ph.liv.ac.uk </p>
-<p> shen.wang@cern.ch </p>
-<p> &nbsp </p>
-<p> Last modified: 26th August, 2020 </p>
+</div>
 
-<!-- 在此处写注释 -->
-<!-- 在此处写注释 -->
-<!-- 在此处写注释 -->
-<!--     <p>Chapter 1</p>
-    <p>My load。</p>
--->
+
+<div class="w3-bar" style="color:yellow; background-color:#02185A;">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="./ap2/ap2_analysis.html" class="w3-bar-item w3-button">Allpix2 analysis</a>
+  <a href="./sensor_qc/sensor_qc.html" class="w3-bar-item w3-button">Sensor QC</a>
+  <a href="./hybrid_testing/hybrid_testing.html" class="w3-bar-item w3-button">Hybrid test</a>
+</div>
+
+
+<h4>&nbsp  </h4>
+<div class="w3-container w3-center">
+  <h2> Some pictures </h2>
+
+</div>
+
+<div class="pic_left">
+	<img src="./ladder_demo.png" alt="Alps" style="width:100%">
+	<p>Fig.1 VLAST tracker detector 1/4 layer.</p>
+</div>
+<div class="pic_right">
+	<img src="./sensor_module.jpg" alt="Alps"  style="width:100%">
+	<p>Fig.2 VLAST tracker sensor module.</p>
+</div>
+
+
+<h4>&nbsp  </h4>
+
+
+<div class="w3-container w3-center">
+  <h2> Brief results </h2>
+  
+  <p> Most sensor channels (>97%) are in low noise (less than 700e-) and have good linearity (mean AdjustedRSquared is 0.998).</p>
+</div>
+
+<div class="w3-container" style="color:white; background-color:#02185A;">
+ <p> Please contact me by: &nbsp 
+<a href="mailto:wangshen@pmo.ac.cn">
+	wangshen@pmo.ac.cn </a>
+  <p> Last modified: 27th August, 2020 </p>
+</div>
 
 </body>
-</html>
+</html> 
+

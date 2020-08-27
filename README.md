@@ -14,8 +14,10 @@ here I post some code and results.
 	git commit -m "xxx xxx"
 
 	git push -u origin master
+	
+	(input yout ID and password)
 
-3. Go to https://hqlwyz.github.io/
+3. Go to https://hqlwyz.github.io/,may need 1 minute or more to refresh the website.
 
 ## Another useful page:
 
