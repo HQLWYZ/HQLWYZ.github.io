@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VLAST tracker</title>
 <style>
 * {
   box-sizing: border-box;
@@ -24,7 +25,7 @@ html {
 }
 
 .header {
-  background-color: #02185A;
+  background-color: #1f2c78;
   color: #ffffff;
   padding: 15px;
 }
@@ -38,8 +39,8 @@ html {
 .menu li {
   padding: 8px;
   margin-bottom: 7px;
-  background-color: #02185A;
-  color: yellow;
+  background-color: #1f2c78;
+  color: YELLOW;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -47,18 +48,18 @@ html {
   background-color: #0099cc;
 }
 .menu li a:link {
-  color: yellow;
+  color: YELLOW;
   background-color: transparent;
   text-decoration: none;
 }
 .menu li a:visited {
-  color: yellow;
+  color: YELLOW;
   background-color: transparent;
   text-decoration: none;
 }
 
 .aside {
-  background-color: #02185A;
+  background-color: #1f2c78;
   padding: 15px;
   color: #ffffff;
   text-align: center;
@@ -77,7 +78,7 @@ padding: 15px;
 }
 
 .footer {
-  background-color: #02185A;
+  background-color: #1f2c78;
   color: #ffffff;
   text-align: center;
   font-size: 12px;
@@ -128,48 +129,60 @@ padding: 15px;
 <body>
 
 <div class="header">
-  <h1>VLAST tracker prototype </h1>
+  <h1>VLAST tracker </h1>
 </div>
 
 <div class="row">
   <div class="col-3 col-s-3 menu">
     <ul>
   		<li><a href="#">Home</a></li>
-  		<li><a href="./ap2/ap2_analysis.html" class="w3-bar-item w3-button">Allpix2 analysis</a></li>
+  		<li><a href="./ap2/ap2_analysis.html" class="w3-bar-item w3-button">Allpix2 analysis </a></li>
   		<li><a href="./sensor_qc/sensor_qc.html" class="w3-bar-item w3-button">Sensor QC</a></li>
  	 	<li><a href="./hybrid_testing/hybrid_testing.html" class="w3-bar-item w3-button">Hybrid test</a></li>
 
     </ul>
 	<h1>&nbsp</h1>
 	<div class="logo1">
-		<a href="https://www.liverpool.ac.uk/" ><img src="./liverpool_logo.png" alt="Alps" style="width:200px"></a>
+		<a href="https://www.liverpool.ac.uk/" ><img src="./liverpool_logo.png" alt="Alps" style="width:100%"></a>
     </div>
 	<p>&nbsp</p>
 	<div class="logo2">
-	 	<a href="http://www.pmo.ac.cn/" ><img src="./pmo_log.png" alt="Alps" style="width: 200px"></a>
+	 	<a href="http://www.pmo.ac.cn/" ><img src="./pmo_log.png" alt="Alps" style="width: 100%"></a>
     </div>
   </div>
 
 
 
   <div class="col-6 col-s-9">
-    <h1>Some pictures</h1>
+	<h1>Introduction</h1>
+	<p>With direct access to cosmic photons covering a wide energy range from GeV to TeV, and with a much improved pointing and energy resolution compared with the Fermi-LAT, the Very Large Area gamma-ray Space Telescope (VLAST, also named DAMPE-II) mission aims to probe two key scientific questions in Particle Astrophysics: 
+	</p>
+	<p>1. What is the origin of cosmic rays? 
+	</p>
+	<p>2. How can high energy parSticles and gravitational waves tell us about the extreme universe?
+	</p>
+	<p>Apparatus is a satellite-based tracking system and calorimeter.
+	</p>
+	<p>In 2017 Liverpool particle physics group and Purple Mountain Observatory (PMO) began collaborating on silicon tracker R&D to develop the tracker for VLAST.
+	</p>
+	<img src="./liv_pmo_meeting.jpg" alt="Alps" style="width: 85%"  >
+	<p>Fig.1 VLAST (DAMPE-II) project in Liverpool.</p>
 	<img src="./ladder_demo.png" alt="Alps" style="width: 85%"  >
-	<p>Fig.1 VLAST tracker detector 1/4 layer.</p>
+	<p>Fig.2 VLAST tracker detector 1/4 layer demo.</p>
 	<img src="./sensor_module.jpg" alt="Alps"style="width: 85%" >
-	<p>Fig.2 VLAST tracker sensor module.</p>
+	<p>Fig.3 VLAST tracker sensor test module.</p>
     
     
   </div>
 
   <div class="col-3 col-s-12">
     <div class="aside">
-      <h2>Channel NO</h2>
-      <p>384 in total</p>
-      <h2>Noise</h2>
-      <p> RMS noise of most sensor channels (>97%) are less than 700e-.</p>
-      <h2>linearity</h2>
-      <p>Mean AdjustedRSquared is 0.998.</p>
+	  <h2>Preliminary results </h2>
+      <h3>Channel</h3> <p>384 in total</p>
+      <h3>Noise</h3>
+      <p>RMS noise of most sensor channels (>97%) are less than 700e-.</p>
+      <h3>Linearity</h3>
+      <p>For most channels(>95%) Intergral Non-Linearity<5%.</p>
     </div>
   </div>
 
@@ -178,10 +191,12 @@ padding: 15px;
 </div>
 
 <div class="footer">
- <p> Please contact me by: &nbsp 
+<p><font size="3" face="arial" > Please contact me by: &nbsp 
 	<a href="mailto:wangshen@pmo.ac.cn">
 	wangshen@pmo.ac.cn </a>
-  <p> Last modified: 27th August, 2020 </p>
+ <p> Last modified: 27th August, 2020 </p>
+</font></p>
+
 </div>
 
 </body>

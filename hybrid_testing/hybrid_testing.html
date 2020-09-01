@@ -13099,14 +13099,14 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="VLAST-hybrid-testing">VLAST hybrid testing<a class="anchor-link" href="#VLAST-hybrid-testing">&#182;</a></h1><p>Here below the cen is gaussian's sigma.</p>
+<h1 id="VLAST-hybrid-testing">VLAST hybrid testing<a class="anchor-link" href="#VLAST-hybrid-testing">&#182;</a></h1><p>At first, import some libraries.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ROOT</span>
@@ -13116,10 +13116,28 @@ $( document ).ready(function(){
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome to JupyROOT 6.22/00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ROOT</span> <span class="kn">import</span> <span class="n">TFile</span><span class="p">,</span> <span class="n">gDirectory</span><span class="p">,</span> <span class="n">gSystem</span><span class="p">,</span> <span class="n">TClass</span><span class="p">,</span> <span class="n">gROOT</span><span class="p">,</span> <span class="n">TStyle</span>
@@ -13133,7 +13151,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13154,7 +13172,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myFile</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;wave_points.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -13167,7 +13185,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gROOT</span><span class="o">.</span><span class="n">SetStyle</span><span class="p">(</span><span class="s2">&quot;Plain&quot;</span><span class="p">)</span>
@@ -13192,7 +13210,7 @@ $( document ).ready(function(){
 <span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerColor</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
 <span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerStyle</span><span class="p">(</span> <span class="mi">21</span> <span class="p">)</span>
 <span class="n">gr</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Hold time [#mus]&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Holdb delay time [#mus]&#39;</span> <span class="p">)</span>
 <span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;ADC [bin]&#39;</span> <span class="p">)</span>
 <span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
 <span class="n">gr</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;&quot;</span> <span class="p">)</span>
@@ -13200,8 +13218,8 @@ $( document ).ready(function(){
 <span class="n">latex</span> <span class="o">=</span> <span class="n">ROOT</span><span class="o">.</span><span class="n">TLatex</span><span class="p">()</span>
 <span class="n">latex</span><span class="o">.</span><span class="n">SetNDC</span><span class="p">()</span>
 <span class="n">latex</span><span class="o">.</span><span class="n">SetTextSize</span> <span class="p">(</span><span class="mf">0.040</span><span class="p">)</span>
-<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.62</span> <span class="p">,</span><span class="mf">0.80</span> <span class="p">,</span> <span class="s2">&quot;Input charge  = +50fC &quot;</span><span class="p">)</span>
-<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.62</span> <span class="p">,</span><span class="mf">0.73</span> <span class="p">,</span> <span class="s2">&quot;Shaping time = 8#mus&quot;</span> <span class="p">)</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.57</span> <span class="p">,</span><span class="mf">0.80</span> <span class="p">,</span> <span class="s2">&quot;Input charge  = +50fC &quot;</span><span class="p">)</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.57</span> <span class="p">,</span><span class="mf">0.73</span> <span class="p">,</span> <span class="s2">&quot;Shaping time = 8#mus&quot;</span> <span class="p">)</span>
 <span class="c1">#latex.DrawLatex (0.62 ,0.66 , &quot;J^{#mu}_{em}=#bar{I}&quot;)</span>
 
 
@@ -13258,7 +13276,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ext_cali_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;ext_cali.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -13271,10 +13289,85 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[226]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ext_cali_data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ext_cali_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">tolist</span><span class="p">();</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ext_cali_data</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">tolist</span><span class="p">();</span>
+
+<span class="n">list2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">list0</span><span class="p">)):</span>
+    <span class="n">list2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">list2</span><span class="p">,</span><span class="n">func</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="n">list0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">func</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="n">list_res</span> <span class="o">=</span> <span class="p">(</span><span class="n">list2</span><span class="o">-</span><span class="n">list1</span><span class="p">)</span>
+<span class="n">list_non_linear</span> <span class="o">=</span> <span class="n">list_res</span><span class="o">/</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[237]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ROOT</span> <span class="kn">import</span> <span class="n">TF1</span><span class="p">,</span> <span class="n">gStyle</span>
+
+<span class="n">gROOT</span><span class="o">.</span><span class="n">SetStyle</span><span class="p">(</span><span class="s2">&quot;Plain&quot;</span><span class="p">)</span>
+<span class="c1">#gStyle.SetOptFit(1011) </span>
+<span class="n">gStyle</span><span class="o">.</span><span class="n">SetOptFit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
+
+<span class="n">gStyle</span><span class="o">.</span><span class="n">SetStatY</span><span class="p">(</span><span class="mf">0.85</span><span class="p">)</span>
+<span class="n">gStyle</span><span class="o">.</span><span class="n">SetStatX</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">gStyle</span><span class="o">.</span><span class="n">SetStatW</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">gStyle</span><span class="o">.</span><span class="n">SetStatH</span><span class="p">(</span><span class="mf">0.17</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">TCanvas</span><span class="p">()</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">SetTickx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">SetTicky</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#c1.SetGrid()</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ext_cali_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list0</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+
+    
+<span class="n">gr</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="p">)</span>
+<span class="n">gr</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span>
+
+<span class="n">gr</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Input charge [fC]&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;ADC [bin]&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerColor</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerStyle</span><span class="p">(</span> <span class="mi">21</span> <span class="p">)</span>
+
+
+
+<span class="n">func</span> <span class="o">=</span> <span class="n">TF1</span><span class="p">(</span><span class="s1">&#39;func&#39;</span><span class="p">,</span> <span class="s1">&#39;[0] + [1]*x&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">195</span><span class="p">)</span>
+<span class="n">func</span><span class="o">.</span><span class="n">SetLineColor</span><span class="p">(</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="n">func</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">Fit</span><span class="p">(</span><span class="s1">&#39;func&#39;</span><span class="p">)</span>
+
+<span class="n">gr</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;AP&quot;</span> <span class="p">)</span>
+
+<span class="n">latex</span> <span class="o">=</span> <span class="n">ROOT</span><span class="o">.</span><span class="n">TLatex</span><span class="p">()</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">SetNDC</span><span class="p">()</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">SetTextSize</span> <span class="p">(</span><span class="mf">0.040</span><span class="p">)</span>
+
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.19</span> <span class="p">,</span><span class="mf">0.80</span> <span class="p">,</span> <span class="s2">&quot;p0:    &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">0</span><span class="p">))[:</span><span class="o">+</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot;#pm&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParError</span><span class="p">(</span><span class="mi">0</span><span class="p">))[:</span><span class="o">+</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.19</span> <span class="p">,</span><span class="mf">0.73</span> <span class="p">,</span> <span class="s2">&quot;p1:   &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">1</span><span class="p">))[:</span><span class="o">+</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot;#pm&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParError</span><span class="p">(</span><span class="mi">1</span><span class="p">))[:</span><span class="o">+</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.19</span> <span class="p">,</span><span class="mf">0.66</span> <span class="p">,</span> <span class="s2">&quot;non-linearity:    &quot;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">list_non_linear</span><span class="o">*</span><span class="mi">100</span><span class="p">)))[:</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
+
+<span class="n">print_file_name</span> <span class="o">=</span> <span class="s2">&quot;ex_calibration.pdf&quot;</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="n">print_file_name</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13287,32 +13380,44 @@ $( document ).ready(function(){
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =      14517.1
+NDf                       =           18
+Edm                       =  2.21481e-17
+NCalls                    =           38
+p0                        =      174.808   +/-   13.1923     
+p1                        =      16.5216   +/-   0.110127    
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Info in &lt;TCanvas::Print&gt;: pdf file ex_calibration.pdf has been created
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
 
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[  10.   ,  372.56 ],
-       [  20.   ,  507.33 ],
-       [  30.   ,  669.33 ],
-       [  40.   ,  826.68 ],
-       [  50.   ,  982.34 ],
-       [  60.   , 1154.8  ],
-       [  70.   , 1312.53 ],
-       [  80.   , 1475.255],
-       [  90.   , 1641.75 ],
-       [ 100.   , 1820.855],
-       [ 110.   , 1990.96 ],
-       [ 120.   , 2171.27 ],
-       [ 130.   , 2327.605],
-       [ 140.   , 2516.045],
-       [ 150.   , 2680.255],
-       [ 160.   , 2867.8  ],
-       [ 170.   , 3002.55 ],
-       [ 180.   , 3165.075],
-       [ 190.   , 3309.81 ],
-       [ 200.   , 3396.67 ]])</pre>
+<div class="output_png output_subarea ">
+<img src="output_10_2.png"
+>
 </div>
 
 </div>
@@ -13323,47 +13428,170 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[310]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gROOT</span><span class="o">.</span><span class="n">SetStyle</span><span class="p">(</span><span class="s2">&quot;Plain&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">Clear</span> <span class="p">()</span>
+<span class="n">pad1</span> <span class="o">=</span> <span class="n">ROOT</span><span class="o">.</span><span class="n">TPad</span> <span class="p">(</span><span class="s2">&quot; pad1 &quot;</span><span class="p">,</span><span class="s2">&quot; pad1 &quot;</span> <span class="p">,</span><span class="mi">0</span> <span class="p">,</span><span class="mf">0.3</span> <span class="p">,</span><span class="mi">1</span> <span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">c1</span> <span class="o">=</span> <span class="n">TCanvas</span><span class="p">()</span>
-<span class="n">c1</span> <span class="o">.</span><span class="n">SetTickx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">c1</span> <span class="o">.</span><span class="n">SetTicky</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
- 
-<span class="c1">#c1.SetGrid()</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
 
-<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ext_cali_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="n">list0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ext_cali_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">tolist</span><span class="p">();</span>
-<span class="n">list1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ext_cali_data</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">tolist</span><span class="p">();</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list0</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
- 
-<span class="n">gr</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="p">)</span>
-<span class="n">gr</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">SetLineColor</span><span class="p">(</span> <span class="mi">4</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span> <span class="mi">4</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerColor</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerStyle</span><span class="p">(</span> <span class="mi">21</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Hold time [#mus]&#39;</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;ADC [bin]&#39;</span> <span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
-<span class="n">gr</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;&quot;</span> <span class="p">)</span>
+<span class="n">pad1</span><span class="o">.</span><span class="n">Draw</span> <span class="p">()</span>
+<span class="n">pad1</span><span class="o">.</span><span class="n">cd</span> <span class="p">()</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">Draw</span> <span class="p">(</span><span class="s2">&quot;AP&quot;</span><span class="p">)</span>
 
 <span class="n">latex</span> <span class="o">=</span> <span class="n">ROOT</span><span class="o">.</span><span class="n">TLatex</span><span class="p">()</span>
 <span class="n">latex</span><span class="o">.</span><span class="n">SetNDC</span><span class="p">()</span>
-<span class="n">latex</span><span class="o">.</span><span class="n">SetTextSize</span> <span class="p">(</span><span class="mf">0.040</span><span class="p">)</span>
-<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.22</span> <span class="p">,</span><span class="mf">0.80</span> <span class="p">,</span> <span class="s2">&quot;Input charge  = +50fC &quot;</span><span class="p">)</span>
-<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.22</span> <span class="p">,</span><span class="mf">0.73</span> <span class="p">,</span> <span class="s2">&quot;Shaping time = 8#mus&quot;</span> <span class="p">)</span>
-<span class="c1">#latex.DrawLatex (0.62 ,0.66 , &quot;J^{#mu}_{em}=#bar{I}&quot;)</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">SetTextSize</span> <span class="p">(</span><span class="mf">0.050</span><span class="p">)</span>
 
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.59</span> <span class="p">,</span><span class="mf">0.35</span> <span class="p">,</span> <span class="s2">&quot;p0:    &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">0</span><span class="p">))[:</span><span class="o">+</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot; #pm &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParError</span><span class="p">(</span><span class="mi">0</span><span class="p">))[:</span><span class="o">+</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.59</span> <span class="p">,</span><span class="mf">0.28</span> <span class="p">,</span> <span class="s2">&quot;p1:    &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParameter</span><span class="p">(</span><span class="mi">1</span><span class="p">))[:</span><span class="o">+</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span> <span class="s2">&quot; #pm &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">GetParError</span><span class="p">(</span><span class="mi">1</span><span class="p">))[:</span><span class="o">+</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">latex</span><span class="o">.</span><span class="n">DrawLatex</span> <span class="p">(</span><span class="mf">0.59</span> <span class="p">,</span><span class="mf">0.21</span> <span class="p">,</span> <span class="s2">&quot;non-linearity:    &quot;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">list_non_linear</span><span class="o">*</span><span class="mi">100</span><span class="p">)))[:</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
+
+<span class="n">func</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;AP, same&quot;</span><span class="p">)</span>
 
 <span class="n">c1</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
+</pre></div>
 
-<span class="n">print_file_name</span> <span class="o">=</span> <span class="s2">&quot;Shaping_measurement.pdf&quot;</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="output_11_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[311]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_residual</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list_res</span><span class="p">)</span>
+<span class="n">y_non_linear</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list_non_linear</span><span class="p">)</span>
+
+<span class="n">zero_func</span> <span class="o">=</span> <span class="n">TF1</span><span class="p">(</span><span class="s1">&#39;func&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">210</span><span class="p">)</span>  
+<span class="n">zero_func</span><span class="o">.</span><span class="n">SetLineColor</span><span class="p">(</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="n">zero_func</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span> <span class="mi">2</span> <span class="p">)</span>
+
+<span class="n">gr_res</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_residual</span> <span class="p">)</span>
+
+<span class="n">gr_res</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
+<span class="n">gr_res</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Input charge [fC]&#39;</span> <span class="p">)</span>
+<span class="n">gr_res</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Residual [bin]&#39;</span> <span class="p">)</span>
+<span class="n">gr_res</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="c1">#gr_res.SetMarkerColor( 1 )</span>
+<span class="n">gr_res</span><span class="o">.</span><span class="n">SetMarkerStyle</span><span class="p">(</span> <span class="mi">22</span> <span class="p">)</span>
+
+<span class="n">gr_non_linear</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="p">)</span>
+<span class="n">gr_non_linear</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_non_linear</span> <span class="p">)</span>
+
+<span class="n">gr_non_linear</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
+<span class="n">gr_non_linear</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Input charge [fC]&#39;</span> <span class="p">)</span>
+<span class="n">gr_non_linear</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Non_linear [bin]&#39;</span> <span class="p">)</span>
+<span class="n">gr_non_linear</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="c1">#gr_res.SetMarkerColor( 1 )</span>
+<span class="n">gr_non_linear</span><span class="o">.</span><span class="n">SetMarkerStyle</span><span class="p">(</span> <span class="mi">23</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[312]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">cd</span> <span class="p">()</span>
+<span class="n">pad2</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">.</span> <span class="n">TPad</span> <span class="p">(</span><span class="s2">&quot; pad2 &quot;</span><span class="p">,</span><span class="s2">&quot; pad2 &quot;</span> <span class="p">,</span><span class="mi">0</span> <span class="p">,</span><span class="mf">0.05</span> <span class="p">,</span><span class="mi">1</span> <span class="p">,</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">pad2</span><span class="o">.</span><span class="n">Draw</span> <span class="p">()</span>
+<span class="n">pad2</span><span class="o">.</span><span class="n">cd</span> <span class="p">()</span>
+<span class="n">gr_res</span><span class="o">.</span><span class="n">Draw</span> <span class="p">(</span><span class="s2">&quot;AP&quot;</span><span class="p">)</span>
+<span class="n">zero_func</span><span class="o">.</span><span class="n">Draw</span> <span class="p">(</span><span class="s2">&quot;same&quot;</span><span class="p">)</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">cd</span> <span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[312]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;cppyy.gbl.TCanvas object at 0x559a314e0540&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[313]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pad1</span><span class="o">.</span><span class="n">SetBottomMargin</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pad2</span><span class="o">.</span><span class="n">SetTopMargin</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pad2</span><span class="o">.</span><span class="n">SetBottomMargin</span> <span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+
+<span class="c1">#gr . SetTitle (&quot;&quot;)</span>
+<span class="n">gr</span> <span class="o">.</span> <span class="n">GetXaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetLabelSize</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gr</span> <span class="o">.</span> <span class="n">GetXaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitleSize</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gr</span> <span class="o">.</span> <span class="n">GetYaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitleSize</span> <span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">gr</span> <span class="o">.</span> <span class="n">GetYaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitleOffset</span> <span class="p">(</span><span class="mf">0.8</span><span class="p">)</span>
+
+
+
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">SetTitle</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">GetXaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetLabelSize</span> <span class="p">(</span><span class="mf">0.12</span><span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">GetXaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitleSize</span> <span class="p">(</span><span class="mf">0.12</span><span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">GetYaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetLabelSize</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">GetYaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitleSize</span> <span class="p">(</span><span class="mf">0.13</span><span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">GetYaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitle</span> <span class="p">(</span><span class="s2">&quot;Residual [bin]&quot;</span><span class="p">)</span>
+<span class="n">gr_res</span> <span class="o">.</span> <span class="n">GetYaxis</span> <span class="p">()</span><span class="o">.</span> <span class="n">SetTitleOffset</span> <span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+
+
+
+<span class="n">legend</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">.</span> <span class="n">TLegend</span> <span class="p">(</span><span class="mf">0.15</span> <span class="p">,</span><span class="mf">0.72</span> <span class="p">,</span><span class="mf">0.55</span> <span class="p">,</span><span class="mf">0.88</span><span class="p">)</span>
+<span class="n">legend</span> <span class="o">.</span> <span class="n">AddEntry</span> <span class="p">(</span> <span class="n">gr</span> <span class="p">,</span><span class="s2">&quot; data&quot;</span><span class="p">)</span>
+<span class="n">legend</span> <span class="o">.</span> <span class="n">AddEntry</span> <span class="p">(</span> <span class="n">func</span> <span class="p">,</span><span class="s2">&quot; linear fit &quot;</span><span class="p">)</span>
+<span class="n">legend</span> <span class="o">.</span> <span class="n">AddEntry</span> <span class="p">(</span> <span class="n">gr_res</span> <span class="p">,</span><span class="s2">&quot; residual &quot;</span><span class="p">)</span>
+<span class="n">legend</span> <span class="o">.</span> <span class="n">SetLineWidth</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">legend</span> <span class="o">.</span> <span class="n">Draw</span> <span class="p">(</span><span class="s2">&quot; same &quot;</span><span class="p">)</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
+<span class="n">print_file_name</span> <span class="o">=</span> <span class="s2">&quot;exter_cali_linearity_fit.pdf&quot;</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="n">print_file_name</span><span class="p">)</span>
 </pre></div>
 
@@ -13381,7 +13609,7 @@ $( document ).ready(function(){
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Info in &lt;TCanvas::Print&gt;: pdf file Shaping_measurement.pdf has been created
+<pre>Info in &lt;TCanvas::Print&gt;: pdf file exter_cali_linearity_fit.pdf has been created
 </pre>
 </div>
 </div>
@@ -13394,7 +13622,7 @@ $( document ).ready(function(){
 
 
 <div class="output_png output_subarea ">
-<img src="output_10_1.png"
+<img src="output_14_1.png"
 >
 </div>
 
@@ -13409,8 +13637,8 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Internal-calibration-and-gain">Internal calibration and gain<a class="anchor-link" href="#Internal-calibration-and-gain">&#182;</a></h2><p>using inner cap for calibration, 1st, 2nd and last channel of each chip are broken for this test.</p>
 <p>My target:</p>
-<p><strong>1: Histogram of linearity</strong></p>
-<p><strong>2: Gain of each channel</strong></p>
+<p><strong>1: Gain of each channel</strong></p>
+<p><strong>2: Histogram of non-linearity</strong></p>
 <p><strong>3: Histogram of gain</strong></p>
 
 </div>
@@ -13418,7 +13646,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[315]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">inner_cali_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;all_21points_inner_cali.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -13431,10 +13659,10 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[320]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inner_cali_data</span><span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inner_cali_data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13447,16 +13675,16 @@ $( document ).ready(function(){
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[61]:</div>
+    <div class="prompt output_prompt">Out[320]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 213.96 ,  306.61 ,  427.69 ,  572.54 ,  722.515,  881.93 ,
-        1042.875, 1206.355, 1362.46 , 1531.285, 1692.535, 1865.665,
-        2036.38 , 2201.645, 2374.185, 2531.17 , 2694.16 , 2850.6  ,
-        3000.925, 3149.25 , 3280.295]])</pre>
+<pre>array([ 347.04 ,  451.145,  588.355,  738.335,  898.855, 1049.565,
+       1210.36 , 1377.99 , 1545.575, 1703.695, 1877.73 , 2039.95 ,
+       2201.215, 2366.855, 2542.455, 2705.155, 2865.195, 3031.215,
+       3170.865, 3308.235, 3437.945])</pre>
 </div>
 
 </div>
@@ -13464,6 +13692,604 @@ $( document ).ready(function(){
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[321]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[321]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>21</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[324]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inner_cali_charge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+    <span class="n">inner_cali_charge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inner_cali_charge</span><span class="p">,</span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[332]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[332]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>384</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[390]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">inner_cali_charge</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">inner_cali_data</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># 10, not 9, so the fit isn&#39;t perfect</span>
+<span class="n">coef</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[391]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">coef</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[391]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>210.3698268398269</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[386]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inner_cali_charge</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[386]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([  0.,  10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.,
+       110., 120., 130., 140., 150., 160., 170., 180., 190., 200.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[396]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="n">coef</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">coef</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">inner_cali_charge</span>
+<span class="n">list_res</span> <span class="o">=</span> <span class="p">(</span><span class="n">list2</span><span class="o">-</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">list_non_linear</span> <span class="o">=</span> <span class="n">list_res</span><span class="o">/</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="mi">10</span><span class="p">]))</span>
+<span class="n">non_linear_rate</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">list_non_linear</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[397]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">non_linear_rate</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[397]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.028441378406178514</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[377]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[377]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([16231.02330628, 16231.02330628, 16390.58622836, 18334.72157468,
+       16550.14915043, 20438.41984307, 16709.71207251, 22542.11811147,
+       16869.27499459, 24645.81637987, 17028.83791667, 26749.51464827,
+       17188.40083874, 28853.21291667, 17347.96376082, 30956.91118507,
+       17507.5266829 , 33060.60945346, 17667.08960498, 35164.30772186,
+       17826.65252706, 37268.00599026, 17986.21544913, 39371.70425866,
+       18145.77837121, 41475.40252706, 18305.34129329, 43579.10079545,
+       18464.90421537, 45682.79906385, 18624.46713745, 47786.49733225,
+       18784.03005952, 49890.19560065, 18943.5929816 , 51993.89386905,
+       19103.15590368, 54097.59213745, 19262.71882576, 56201.29040584,
+       19422.28174784, 58304.98867424])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[403]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">inner_cali_analysis_output</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;docstring for event_visual&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slope</span><span class="p">,</span> <span class="n">non_linearity</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">inner_cali_analysis_output</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slope</span> <span class="o">=</span> <span class="n">slope</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">non_linearity</span><span class="o">=</span> <span class="n">non_linearity</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[417]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">inner_cali_analysis</span><span class="p">(</span><span class="n">inner_cali_charge</span><span class="p">,</span><span class="n">inner_cali_data</span><span class="p">):</span>
+
+    <span class="n">slope_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    <span class="n">non_linearity_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">)):</span>
+        
+        <span class="n">x</span> <span class="o">=</span> <span class="n">inner_cali_charge</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">inner_cali_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># 10, not 9, so the fit isn&#39;t perfect</span>
+        <span class="n">coef</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">slope_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope_array</span><span class="p">,</span><span class="n">coef</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">)):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">inner_cali_charge</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">inner_cali_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># 10, not 9, so the fit isn&#39;t perfect</span>
+        <span class="n">coef</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">list2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+        <span class="n">list2</span> <span class="o">=</span> <span class="n">coef</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">coef</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">inner_cali_charge</span>
+        <span class="n">list_res</span> <span class="o">=</span> <span class="p">(</span><span class="n">list2</span><span class="o">-</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">list_non_linear</span> <span class="o">=</span> <span class="n">list_res</span><span class="o">/</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">inner_cali_data</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        
+        <span class="n">non_linear_rate</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">list_non_linear</span><span class="p">))</span>
+        
+        <span class="n">non_linearity_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">non_linearity_array</span><span class="p">,</span><span class="n">non_linear_rate</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">inner_cali_analysis_output</span><span class="p">(</span><span class="n">slope_array</span><span class="p">,</span> <span class="n">non_linearity_array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[418]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inner_cali_analysis</span> <span class="o">=</span> <span class="n">inner_cali_analysis</span><span class="p">(</span><span class="n">inner_cali_charge</span><span class="p">,</span><span class="n">inner_cali_data</span><span class="p">)</span>
+<span class="n">inner_cali_slope_array</span> <span class="o">=</span> <span class="n">inner_cali_analysis</span><span class="o">.</span><span class="n">slope</span>
+<span class="n">inner_cali_non_linearity_array</span> <span class="o">=</span> <span class="n">inner_cali_analysis</span><span class="o">.</span><span class="n">non_linearity</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Gain-v.s.-Channel">Gain v.s. Channel<a class="anchor-link" href="#Gain-v.s.-Channel">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[351]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">channel_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">384</span><span class="p">):</span>
+    <span class="n">channel_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">channel_array</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">channel_array</span><span class="p">,</span> <span class="n">slope_array</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">channel_array</span><span class="p">,</span> <span class="n">slope_array</span><span class="p">,</span> <span class="s1">&#39;C1o&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Parameter where:&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="output_31_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Non-linearity-v.s.-Channel">Non-linearity v.s. Channel<a class="anchor-link" href="#Non-linearity-v.s.-Channel">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[421]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">channel_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">384</span><span class="p">):</span>
+    <span class="n">channel_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">channel_array</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">channel_array</span><span class="p">,</span> <span class="n">inner_cali_non_linearity_array</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">channel_array</span><span class="p">,</span> <span class="n">inner_cali_non_linearity_array</span><span class="p">,</span> <span class="s1">&#39;C1o&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Parameter where:&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="output_33_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[348]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">slopeHist</span> <span class="o">=</span> <span class="n">TH1D</span><span class="p">()</span>
+<span class="n">slopeHist</span> <span class="o">=</span> <span class="n">TH1D</span><span class="p">(</span><span class="s2">&quot;Slope&quot;</span><span class="p">,</span><span class="s2">&quot;Slope&quot;</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">slope_array</span><span class="p">)):</span>
+    <span class="n">slopeHist</span><span class="o">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">slope_array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">SetStats</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> 
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">SetLineColor</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">SetFillColor</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+
+
+<span class="n">std</span><span class="o">=</span><span class="n">slopeHist</span><span class="o">.</span><span class="n">GetStdDev</span><span class="p">()</span>
+<span class="c1">#rms =np.sqrt(np.mean(root_array**2))</span>
+
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span><span class="s2">&quot;Gain [ADC/fC]&quot;</span><span class="p">)</span>
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span><span class="s2">&quot;Number of channels&quot;</span><span class="p">)</span>
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">TCanvas</span><span class="p">()</span>
+<span class="n">canvas</span><span class="o">.</span><span class="n">SetTickx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">canvas</span><span class="o">.</span><span class="n">SetTicky</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">slopeHist</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
+
+<span class="c1"># latex = ROOT.TLatex()</span>
+<span class="c1"># latex.SetNDC()</span>
+<span class="c1"># latex.SetTextSize (0.04)</span>
+<span class="c1"># latex_left_pos = 0.65</span>
+<span class="c1"># latex.DrawText (latex_left_pos ,0.80 , &quot;Entries = &quot;+str(len(residual_demo)))</span>
+
+
+<span class="n">canvas</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
+
+
+<span class="n">print_file_name</span> <span class="o">=</span> <span class="s2">&quot;inner_cali_gain_dist.pdf&quot;</span>
+
+<span class="n">canvas</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="n">print_file_name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Info in &lt;TCanvas::Print&gt;: pdf file inner_cali_gain_dist.pdf has been created
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="output_34_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[356]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">TCanvas</span><span class="p">()</span>
+<span class="n">c1</span> <span class="o">.</span><span class="n">SetTickx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">.</span><span class="n">SetTicky</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+ 
+<span class="c1">#c1.SetLogy(1)</span>
+
+
+<span class="n">list0</span> <span class="o">=</span> <span class="n">channel_array</span>
+<span class="n">list1</span> <span class="o">=</span><span class="n">slope_array</span> 
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">channel_array</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list0</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+ 
+<span class="n">gr</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="p">)</span>
+<span class="n">gr</span> <span class="o">=</span> <span class="n">TGraph</span><span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetLineColor</span><span class="p">(</span> <span class="mi">4</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerColor</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetMarkerStyle</span><span class="p">(</span> <span class="mi">21</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetXaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;channel&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s1">&#39;Gain [bin/fC]&#39;</span> <span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">GetYaxis</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleOffset</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="n">gr</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;&quot;</span> <span class="p">)</span>
+
+<span class="c1">#latex = ROOT.TLatex()</span>
+<span class="c1">#latex.SetNDC()</span>
+<span class="c1">#latex.SetTextSize (0.040)</span>
+<span class="c1">#latex.DrawLatex (0.57 ,0.80 , &quot;Input charge  = +50fC &quot;)</span>
+<span class="c1">#latex.DrawLatex (0.57 ,0.73 , &quot;Shaping time = 8#mus&quot; )</span>
+<span class="c1">#latex.DrawLatex (0.62 ,0.66 , &quot;J^{#mu}_{em}=#bar{I}&quot;)</span>
+
+
+<span class="n">c1</span><span class="o">.</span><span class="n">Draw</span><span class="p">()</span>
+
+<span class="n">print_file_name</span> <span class="o">=</span> <span class="s2">&quot;channel_gain.pdf&quot;</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="n">print_file_name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Info in &lt;TCanvas::Print&gt;: pdf file channel_gain.pdf has been created
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="output_35_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pedestal-and-RMS-noise">Pedestal and RMS noise<a class="anchor-link" href="#Pedestal-and-RMS-noise">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
