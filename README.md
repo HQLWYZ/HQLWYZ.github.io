@@ -17,7 +17,7 @@ here I post some code and results.
 	
 	(input yout ID and password)
 
-3. Go to https://hqlwyz.github.io/,may need 1 minute or more to refresh the website.
+3. Go to https://hqlwyz.github.io/ , may need 1 minute or more to refresh the website.
 
 ## Another useful page:
 
