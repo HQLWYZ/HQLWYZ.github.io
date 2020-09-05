@@ -1,7 +1,6 @@
-# hqlwyz.github.io
+# How to make a simple page
 
 
-here I post some code and results.
 
 ## Build steps:
 
@@ -15,7 +14,7 @@ here I post some code and results.
 
 	git push -u origin master
 	
-	(input yout ID and password)
+	(input your github ID and password)
 
 3. Go to https://hqlwyz.github.io/ , may need 1 minute or more to refresh the website.
 
